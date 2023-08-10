@@ -1,42 +1,191 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* CSS reset from https://andy-bell.co.uk/a-modern-css-reset/ */
 
-@layer base {
-  :root {
-    --background: 200 20% 98%;
-    --btn-background: 200 10% 91%;
-    --btn-background-hover: 200 10% 89%;
-    --foreground: 200 50% 3%;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: 200 50% 3%;
-      --btn-background: 200 10% 9%;
-      --btn-background-hover: 200 10% 12%;
-      --foreground: 200 20% 96%;
-    }
-  }
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@layer base {
-  * {
-    @apply border-foreground/20;
-  }
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-.animate-in {
-  animation: animateIn 0.3s ease 0.15s both;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
 
-@keyframes animateIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Start  */
+
+/* body {
+  background-color: whitesmoke;
+} */
+
+.header {
+  height: 55px;
+  background: #f55a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 50px;
+}
+
+h1 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 1.25rem;
+  /* font-style: normal; */
+  /* font-weight: 500; */
+  /* line-height: normal; */
+  letter-spacing: -1.085px;
+}
+
+h2,
+h3 {
+  color: #2b283a;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+p {
+  color: #2b283a;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 15.36px */
+  margin-top: 10px;
+}
+main {
+  margin: 0 auto;
+  max-width: 960px;
+  height: 100vh;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 40px 0px 00px 30px;
+  background-color: #fff;
+  /* border: #2b283a 1px solid; */
+}
+
+.travel-images {
+  width: 250px;
+  border-radius: 12px;
+  margin-right: 14px;
+  background-color: fuchsia;
+  outline: 1px seagreen solid;
+  height: 350px;
+}
+
+.location-info {
+  min-width: 600px;
+}
+
+/* .country img {
+  display: inline-block;
+  height: 13px;
+  margin-right: 5px;
+} */
+
+.country h3,
+.country a {
+  display: inline; /* or you can use display: inline-block; */
+  margin-right: 10px; /* optional, if you want some space between the elements */
+}
+
+.place {
+  color: #2b283a;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.741px;
+  text-transform: uppercase;
+}
+
+a {
+  color: #918e9b;
+  font-family: Inter;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.title {
+  color: #2b283a;
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.dates {
+  color: #2b283a;
+  font-family: Inter;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+}
+
+.pin {
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  margin-right: 5px;
 }
