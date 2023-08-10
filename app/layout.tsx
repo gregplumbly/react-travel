@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import { Inter } from "next/font/google";
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Create Next App",
