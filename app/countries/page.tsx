@@ -1,7 +1,7 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import Header from "components/Header.tsx";
-import Location from "components/Location.tsx";
+import Header from "../../components/Header";
+import Location from "../../components/Location";
 export default async function Index() {
   const supabase = createServerComponentClient({ cookies });
 

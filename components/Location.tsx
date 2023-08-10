@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Location(props) {
+export default function Location(props: any) {
   return (
     <div className="location">
       <img
